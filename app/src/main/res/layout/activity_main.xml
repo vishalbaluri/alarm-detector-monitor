@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF2F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <Button
+                android:id="@+id/buttonSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#B22222"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/settings"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="259dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:text="Status: "
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/fire_alarm_logo"
+                android:contentDescription="@string/fire_alarm_logo"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fire_alarm_detector"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_room_to_view_status"
+            android:textSize="13sp"
+            android:textColor="#7A7A7A"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- ROOM SELECTOR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_spinner"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="14dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_apartment"
+                android:contentDescription="@string/room"/>
+
+            <Spinner
+                android:id="@+id/spinner_room"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/transparent"
+                android:spinnerMode="dropdown"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drop_down"
+                android:textSize="18sp"
+                android:textColor="#1E5F9E"/>
+        </LinearLayout>
+
+        <!-- ROW 1: MODULE STATUS + BATTERY STATUS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:baselineAligned="false">
+
+            <!-- MODULE STATUS CARD -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:minHeight="130dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_led_icon"
+                    android:contentDescription="@string/module"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/module_status"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#1A1A1A"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:id="@+id/iv_led"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/circle_green"/>
+
+                    <TextView
+                        android:id="@+id/tv_led_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/green"
+                        android:textColor="#1BA64B"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginStart="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- BATTERY STATUS CARD -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:minHeight="130dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/battery"
+                        android:contentDescription="@null"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="@string/battery_status"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="#1A1A1A"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="50dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/bg_battery_outline"
+                        android:padding="3dp">
+
+                        <ProgressBar
+                            android:id="@+id/pb_battery"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:max="100"
+                            android:progress="75"
+                            android:progressDrawable="@drawable/bg_battery_fill"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="9dp"
+                        android:layout_marginStart="2dp"
+                        android:background="#C9C9C9"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_bat_voltage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/_2_25v_75"
+                    android:textColor="#1E5F9E"
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ROW 2: TEST SWITCH + BUZZER STATUS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:baselineAligned="false">
+
+            <!-- TEST SWITCH CARD -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:minHeight="130dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_switch"
+                    android:contentDescription="@string/_switch"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/test_switch"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#1A1A1A"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_test"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/off"
+                        android:textStyle="bold"
+                        android:textColor="#7A7A7A"
+                        android:textSize="18sp"/>
+
+                    <Switch
+                        android:id="@+id/sw_test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:enabled="false"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- BUZZER STATUS CARD -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:minHeight="130dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_buzzer"
+                    android:contentDescription="@string/buzzer"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buzzer_status"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#1A1A1A"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_buzzer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/_off"
+                        android:textStyle="bold"
+                        android:textColor="#7A7A7A"
+                        android:textSize="18sp"/>
+
+                    <Switch
+                        android:id="@+id/sw_buzzer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:enabled="false"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- FOOTER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="18dp"
+            android:padding="12dp"
+            android:background="@drawable/bg_footer">
+
+            <TextView
+                android:id="@+id/tv_devid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/_192_168_31_202"
+                android:textSize="12sp"
+                android:textColor="#7A7A7A"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kitchen_john_nagaram_live"
+                android:textSize="12sp"
+                android:textColor="#7A7A7A"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

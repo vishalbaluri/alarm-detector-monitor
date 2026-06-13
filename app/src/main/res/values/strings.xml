@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Alarm Detector </string>
+    <string name="select_room_prompt">Select room to view status</string>
+    <string name="led_status_label">LED Status</string>
+    <string name="battery_label">Battery Voltage</string>
+    <string name="buzzer_label">Buzzer</string>
+    <string name="refresh_button">Refresh Now</string>
+    <string name="led_green">GREEN</string>
+    <string name="led_red">RED - Fault</string>
+    <string name="buzzer_on">ON - Alarm Active!</string>
+    <string name="buzzer_off">OFF - Silent</string>
+    <string name="connection_error">Connection error</string>
+    <string name="loading">Loading...</string>
+    <string name="no_data">No data</string>
+    <string name="settings">Settings</string>
+    <string name="fire_alarm_logo">Fire Alarm Logo</string>
+    <string name="fire_alarm_detector">Fire Alarm Detector</string>
+    <string name="select_room_to_view_status">Select room to view status</string>
+    <string name="room">Room</string>
+    <string name="drop_down">⌄</string>
+    <string name="module">Module</string>
+    <string name="module_status">Module Status</string>
+    <string name="green">GREEN</string>
+    <string name="battery_status">Battery Status</string>
+    <string name="_2_25v_75">2.25V (75%)</string>
+    <string name="_switch">Switch</string>
+    <string name="test_switch">Test Switch</string>
+    <string name="off">OFF</string>
+    <string name="buzzer">Buzzer</string>
+    <string name="buzzer_status">Buzzer Status</string>
+    <string name="_off">OFF</string>
+    <string name="_192_168_31_202">192.168.31.202</string>
+    <string name="kitchen_john_nagaram_live">Kitchen • JOHN • Nagaram • Live</string>
+</resources>

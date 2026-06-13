@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Battery Body -->
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF"/>
+            <stroke
+                android:width="2dp"
+                android:color="#888888"/>
+            <corners android:radius="2dp"/>
+        </shape>
+    </item>
+
+    <!-- Battery Fill (will be updated programmatically) -->
+    <item
+        android:id="@+id/battery_fill"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp"
+        android:bottom="2dp">
+
+        <clip>
+            <shape>
+                <solid android:color="#1BA64B"/>
+                <corners android:radius="1dp"/>
+            </shape>
+        </clip>
+
+    </item>
+
+</layer-list>
